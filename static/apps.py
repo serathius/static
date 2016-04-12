@@ -126,7 +126,7 @@ class Cling(object):
             if environ['REQUEST_METHOD'] == 'GET':
                 return self._body(full_path, environ, file_like)
             else:
-                return ['']
+                return [b""]
         except (IOError, OSError):
             return self.not_found(environ, start_response)
 
